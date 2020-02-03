@@ -6,7 +6,8 @@ var rp = require("request-promise");
         let finalResult= [];
         console.log('start');
         const document = await rp('http://norvig.com/big.txt');
-        console.log('resilt loaded');
+        console.log('document loaded');
+        
         const resultObjArray = [];
         document.split(" ").forEach((word) => {
             word = word.replace(/[^a-zA-Z0-9]/g, '');
